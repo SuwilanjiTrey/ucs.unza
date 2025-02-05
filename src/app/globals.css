@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    /* Brand Primary Colors */
+    --ucs-teal: 187 70% 37%;      /* #2C8992 */
+    --ucs-orange: 35 100% 50%;    /* #FF9000 */
+    
+    /* Brand Secondary Colors */
+    --ucs-offwhite: 30 10% 95%;   /* #F4F2EF */
+    --ucs-gray: 184 4% 28%;       /* #454B4C */
+
+    /* System Colors */
+    --background: var(--ucs-offwhite);
+    --foreground: var(--ucs-gray);
+
+    --card: 0 0% 100%;
+    --card-foreground: var(--ucs-gray);
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--ucs-gray);
+ 
+    --primary: var(--ucs-teal);
+    --primary-foreground: var(--ucs-offwhite);
+ 
+    --secondary: var(--ucs-orange);
+    --secondary-foreground: var(--ucs-offwhite);
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: var(--ucs-orange);
+    --accent-foreground: var(--ucs-offwhite);
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: var(--ucs-teal);
+    --input: var(--ucs-gray);
+    --ring: var(--ucs-teal);
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: var(--ucs-gray);
+    --foreground: var(--ucs-offwhite);
+ 
+    --card: var(--ucs-gray);
+    --card-foreground: var(--ucs-offwhite);
+ 
+    --popover: var(--ucs-gray);
+    --popover-foreground: var(--ucs-offwhite);
+ 
+    --primary: var(--ucs-teal);
+    --primary-foreground: var(--ucs-offwhite);
+ 
+    --secondary: var(--ucs-orange);
+    --secondary-foreground: var(--ucs-offwhite);
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: var(--ucs-orange);
+    --accent-foreground: var(--ucs-offwhite);
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: var(--ucs-offwhite);
+ 
+    --border: var(--ucs-teal);
+    --input: var(--ucs-teal);
+    --ring: var(--ucs-offwhite);
+  }
+}
+
+@layer utilities {
+  /* Brand Gradients */
+  .bg-gradient-teal {
+    background: linear-gradient(45deg, hsl(var(--ucs-teal)) 0%, hsl(var(--ucs-teal) / 0.8) 100%);
+  }
+
+  .bg-gradient-orange {
+    background: linear-gradient(45deg, hsl(var(--ucs-orange)) 0%, hsl(var(--ucs-orange) / 0.8) 100%);
+  }
+
+  .bg-gradient-brand {
+    background: linear-gradient(45deg, hsl(var(--ucs-teal)) 0%, hsl(var(--ucs-orange)) 100%);
+  }
+
+  /* Pattern Background */
+  .bg-pattern {
+    background-image: url("/pattern.jpeg")  }
+}
+
+/* Typography */
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('/fonts/JosefinSans-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('/fonts/FiraCode-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--ucs-offwhite);
+  }
+
+  code {
+    font-family: 'Fira Code', monospace;
+  }
+}
