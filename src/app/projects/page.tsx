@@ -11,14 +11,14 @@ import Link from "next/link";
 export default function ProjectsPage() {
   const projects = [
     {
-      title: "Student Portal App",
+      title: "SkillForge",
       description:
-        "A mobile application for UNZA students to access academic resources and campus information.",
-      image: "/placeholder.svg",
-      tags: ["React Native", "Node.js", "MongoDB"],
-      status: "In Progress",
+        "A mobile application for computer science students to access academic resources and learn how to code.",
+      image: "/skillforge.png",
+      tags: ["React", "firebase"],
+      status: "Completed",
       github: "#",
-      demo: "#",
+      demo: "https://skillforge-01185.web.app/",
     },
     {
       title: "AI Study Assistant",
@@ -26,7 +26,7 @@ export default function ProjectsPage() {
         "An AI-powered platform helping students with study materials and exam preparation.",
       image: "/placeholder.svg",
       tags: ["Python", "TensorFlow", "Flask"],
-      status: "Completed",
+      status: "In Progress",
       github: "#",
       demo: "#",
     },

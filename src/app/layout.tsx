@@ -22,6 +22,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <title>UNZA Computer Science Society</title>
+        <link rel="icon" href="/logo.ico" />
         <meta name="description" content="Welcome to the University of Zambia Computer Science Society - Empowering future tech leaders" />
       </head>
       <body className={cn("min-h-screen font-sans antialiased", inter.className)}>

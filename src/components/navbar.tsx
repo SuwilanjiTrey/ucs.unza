@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
-import { MoonIcon, SunIcon, Menu } from 'lucide-react'
+import { MoonIcon, SunIcon, Menu, ExternalLink } from 'lucide-react'
 import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 import {
@@ -17,6 +17,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 export function Navbar() {
   const { setTheme } = useTheme()
   const [isScrolled, setIsScrolled] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState(false)
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +35,16 @@ export function Navbar() {
     { name: "Projects", href: "/projects" },
     { name: "Donate", href: "/donate" },
     { name: "Executive", href: "/executive" },
+  ]
+
+  // Mobile-only external link
+  const mobileOnlyNav = [
+    { 
+      name: "Learn How to Code", 
+      href: "https://skillforge-01185.web.app/", 
+      icon: <ExternalLink className="h-4 w-4 ml-1" />,
+      isExternal: true
+    }
   ]
 
   return (
@@ -90,7 +101,7 @@ export function Navbar() {
 
           {/* Mobile Navigation */}
           <div className="flex md:hidden">
-            <Sheet>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
                   <Menu className="h-6 w-6" />
@@ -103,10 +114,25 @@ export function Navbar() {
                     <Link
                       key={item.name}
                       href={item.href}
+                      onClick={() => setIsOpen(false)}
                       className="px-3 py-2 text-sm font-medium hover:text-primary"
                     >
                       {item.name}
                     </Link>
+                  ))}
+                  {/* Mobile-only external link */}
+                  {mobileOnlyNav.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsOpen(false)}
+                      className="px-3 py-2 text-sm font-medium hover:text-primary flex items-center"
+                    >
+                      {item.name}
+                      {item.icon}
+                    </a>
                   ))}
                 </div>
               </SheetContent>
@@ -117,4 +143,3 @@ export function Navbar() {
     </nav>
   )
 }
-

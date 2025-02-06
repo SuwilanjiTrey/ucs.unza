@@ -46,7 +46,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="relative h-[400px] rounded-xl overflow-hidden">
-            <Image src="/history-image.jpg" alt="History of UCS" fill className="object-cover" />
+            <Image src="/placeholder.svg" alt="History of UCS" fill className="object-cover" />
           </div>
         </div>
       </section>
