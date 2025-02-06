@@ -38,16 +38,16 @@ export function HeroSection() {
                 height={80}
                 className="w-16 h-16 lg:w-20 lg:h-20"
               />
-              <h2 className="text-2xl font-bold text-[#2C8992]">Welcome to</h2>
+              <h2 className="font-display text-2xl font-bold text-[#2C8992]">Welcome to</h2>
             </div>
             
-            <h1 className="text-4xl font-bold sm:text-6xl lg:text-7xl bg-gradient-to-r from-[#2C8992] to-[#FF9000] bg-clip-text text-transparent">
+            <h1 className="font-display text-4xl font-bold sm:text-6xl lg:text-7xl bg-gradient-to-r from-[#2C8992] to-[#FF9000] bg-clip-text text-transparent">
               UNZA Computer Society
               </h1>
             
           </div>
 
-          <p className="mx-auto max-w-3xl text-lg sm:text-xl text-foreground leading-relaxed">
+          <p className= "font-sans mx-auto max-w-3xl text-lg sm:text-xl text-foreground leading-relaxed">
             Empowering students to innovate, collaborate, and excel in the world of
             technology. Join us in shaping the future of computing.
           </p>
@@ -58,7 +58,7 @@ export function HeroSection() {
               size="lg"
               className="bg-[#2C8992] hover:bg-[#2C8992]/90 text-white font-semibold px-8 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <Link href="/join" className="flex items-center gap-2">
+              <Link href="/join" className="font-mono flex items-center gap-2">
                 Join Now
                 <ArrowRight className="w-4 h-4" />
               </Link>
@@ -67,7 +67,7 @@ export function HeroSection() {
               variant="outline" 
               size="lg" 
               asChild
-              className="border-[#2C8992] text-[#2C8992] hover:bg-[#2C8992]/10 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="font-mono border-[#2C8992] text-[#2C8992] hover:bg-[#2C8992]/10 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Link href="/about">Learn More</Link>
             </Button>

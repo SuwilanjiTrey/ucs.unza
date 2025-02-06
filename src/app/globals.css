@@ -130,3 +130,15 @@
     font-family: 'Fira Code', monospace;
   }
 }
+
+/* Custom styles for smaller screens */
+@media (max-width: 640px) {
+    .carousel-card {
+    margin: 0 auto;
+  }
+  .carousel-container {
+  position: relative;
+  overflow: hidden;
+  gap: 1rem; /* Add some spacing */
+}
+}

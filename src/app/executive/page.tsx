@@ -5,7 +5,7 @@ import { Mail, Linkedin, Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, MotionStyle } from "framer-motion";
 import AlumniSection from "./alumni";
 
 export default function ExecutivePage() {
@@ -68,15 +68,56 @@ export default function ExecutivePage() {
 
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setDirection(1);
       setIndex((prevIndex) => (prevIndex + 1) % executives.length);
     }, 10000);
-
     return () => clearInterval(interval);
   }, [executives.length]);
+
+const getCardStyles = (offset: number): MotionStyle => ({
+  position: 'absolute' as const,
+  width: isMobile ? '85%' : '24rem',
+  left: isMobile ? '8%' : '35%',  // This line changes the left position based on device type
+  transform: `translateX(-50%)`,
+  zIndex: offset === 0 ? 1 : 0,
+});
+
+  const getMotionProps = (offset: number) => ({
+    initial: {
+      x: offset === 1 ? 300 : offset === -1 ? -300 : 0,
+      scale: 0.95,
+      opacity: 0,
+    },
+    animate: {
+      x: isMobile ? offset * 150 : offset * 400,
+      scale: offset === 0 ? 1 : 0.85,
+      opacity: offset === 0 ? 1 : isMobile ? 0 : 0.5,
+    },
+    exit: {
+      x: direction === 1 ? -300 : 300,
+      scale: 0.9,
+      opacity: 0,
+    },
+    transition: {
+      x: { type: 'spring', stiffness: 300, damping: 30 },
+      opacity: { duration: 0.8 },
+    },
+  });
+
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -94,87 +135,74 @@ export default function ExecutivePage() {
         </div>
       </section>
 
-      {/* Executive Carousel */}
-      <section className="py-12 md:py-24">
-        <div className="mx-auto max-w-7xl px-4">
-          <div className="flex justify-center items-center min-h-[500px] relative">
-            <AnimatePresence initial={false}>
-              {[-1, 0, 1].map((offset) => {
-                const effectiveIndex = (index + offset + executives.length) % executives.length;
-                const executive = executives[effectiveIndex];
-                
-                return (
-                  <motion.div
-                    key={effectiveIndex}
-                    custom={offset}
-                    initial={{ 
-                      x: offset === 1 ? 1000 : offset === -1 ? -1000 : 0,
-                      scale: 0.9,
-                      opacity: 0 
-                    }}
-                    animate={{ 
-                      x: offset * 400,
-                      scale: offset === 0 ? 1.1 : 0.9,
-                      opacity: offset === 0 ? 1 : 0.5,
-                      zIndex: offset === 0 ? 1 : 0
-                    }}
-                    exit={{
-                      x: direction === 1 ? -1000 : 1000,
-                      scale: 0.9,
-                      opacity: 0
-                    }}
-                    transition={{
-                      x: { type: "spring", stiffness: 300, damping: 30 },
-                      opacity: { duration: 0.8 }
-                    }}
-                    className="absolute w-96"
-                  >
-                    <Card className="overflow-hidden shadow-lg">
-                      <CardHeader className="p-0">
-                        <div className="relative aspect-[4/3] w-full">
-                          <Image
-                            src={executive.image}
-                            alt={executive.name}
-                            fill
-                            className="object-cover"
-                          />
+{/* Executive Carousel */}
+<section className="py-6 md:py-24 relative">
+      <div className="mx-auto max-w-7xl px-4">
+        <div className="flex justify-center items-center min-h-[500px] relative overflow-hidden">
+          <AnimatePresence initial={false}>
+            {[-1, 0, 1].map((offset) => {
+              const effectiveIndex = (index + offset + executives.length) % executives.length;
+              const executive = executives[effectiveIndex];
+
+              return (
+                <motion.div
+                  key={effectiveIndex}
+                  style={getCardStyles(offset)}
+                  {...getMotionProps(offset)}
+                  className="carousel-card"
+                >
+                  <Card className="overflow-hidden shadow-lg">
+                    <CardHeader className="p-0">
+                      <div className="relative aspect-[4/3] w-full">
+                        <Image
+                          src={executive.image}
+                          alt={executive.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </CardHeader>
+                    <CardContent className="p-6">
+                      <div className="space-y-4 text-center">
+                        <h2 className="text-2xl font-bold">{executive.name}</h2>
+                        <p className="text-primary">{executive.position}</p>
+                        <p className="text-foreground text-sm md:text-base">
+                          {executive.bio}
+                        </p>
+                        <div className="flex justify-center space-x-4">
+                          <Link
+                            href={`mailto:${executive.email}`}
+                            className="text-muted-foreground hover:text-primary"
+                            aria-label={`Email ${executive.name}`}
+                          >
+                            <Mail className="h-5 w-5" />
+                          </Link>
+                          <Link
+                            href={executive.linkedin}
+                            className="text-muted-foreground hover:text-primary"
+                            aria-label={`LinkedIn profile of ${executive.name}`}
+                          >
+                            <Linkedin className="h-5 w-5" />
+                          </Link>
+                          <Link
+                            href={executive.github}
+                            className="text-muted-foreground hover:text-primary"
+                            aria-label={`GitHub profile of ${executive.name}`}
+                          >
+                            <Github className="h-5 w-5" />
+                          </Link>
                         </div>
-                      </CardHeader>
-                      <CardContent className="p-6">
-                        <div className="space-y-4 text-center">
-                          <h2 className="text-2xl font-bold">{executive.name}</h2>
-                          <p className="text-primary">{executive.position}</p>
-                          <p className="text-foreground">{executive.bio}</p>
-                          <div className="flex justify-center space-x-4">
-                            <Link
-                              href={`mailto:${executive.email}`}
-                              className="text-muted-foreground hover:text-primary"
-                            >
-                              <Mail className="h-5 w-5" />
-                            </Link>
-                            <Link
-                              href={executive.linkedin}
-                              className="text-muted-foreground hover:text-primary"
-                            >
-                              <Linkedin className="h-5 w-5" />
-                            </Link>
-                            <Link
-                              href={executive.github}
-                              className="text-muted-foreground hover:text-primary"
-                            >
-                              <Github className="h-5 w-5" />
-                            </Link>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                );
-              })}
-            </AnimatePresence>
-          </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
+          </AnimatePresence>
         </div>
-      </section>
+      </div>
+    </section>
+
 
       <AlumniSection />
 
