@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Target, Users2, Lightbulb } from "lucide-react";
 
+//where you see... this "&#39;" thats an apostrophe, aparently next.js doesnt like playing nice with jsx files
+//so remember, this ->   > ' <  ===  &#39;
+
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -12,7 +15,7 @@ export default function AboutPage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-8">
           <h1 className="text-4xl font-bold sm:text-6xl text-primary">About Us</h1>
           <p className="mx-auto max-w-3xl text-lg sm:text-xl text-foreground">
-            Learn about our journey, mission, and the impact we're making in the
+            Learn about our journey, mission, and the impact we&#39;re making in the
             tech community at the University of Zambia.
           </p>
         </div>
@@ -30,7 +33,7 @@ export default function AboutPage() {
                 community for tech enthusiasts.
               </p>
               <p>
-                Over the years, we've grown into one of the most active and
+                Over the years, we&#39;ve grown into one of the most active and
                 influential student organizations at UNZA, hosting numerous
                 events, workshops, and initiatives that have impacted hundreds of
                 students.

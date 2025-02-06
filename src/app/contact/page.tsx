@@ -1,9 +1,12 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import Textarea from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+
+//where you see... this "&#39;" thats an apostrophe, aparently next.js doesnt like playing nice with jsx files
+//so remember, this ->   > ' <  ===  &#39;
 
 export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
@@ -21,7 +24,7 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="mx-auto max-w-3xl text-lg sm:text-xl text-white/90">
-            Have questions about the UNZA Computer Science Society? We'd love to hear from you.
+            Have questions about the UNZA Computer Science Society? We&#39;d love to hear from you.
           </p>
         </div>
       </section>

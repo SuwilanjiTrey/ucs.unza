@@ -5,6 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
+//where you see... this "&#39;" thats an apostrophe, aparently next.js doesnt like playing nice with jsx files
+//so remember, this ->   > ' <  ===  &#39;
+ 
 export default function ProjectsPage() {
   const projects = [
     {
@@ -111,7 +114,7 @@ export default function ProjectsPage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <h2 className="text-3xl font-bold sm:text-4xl text-primary">Have a Project Idea?</h2>
           <p className="mx-auto max-w-2xl text-lg text-foreground">
-            We're always looking for new and innovative project ideas. Share your vision with us and let's bring it to life together.
+            We&#39;re always looking for new and innovative project ideas. Share your vision with us and let&#39;s bring it to life together.
           </p>
           <Button size="lg" asChild className="bg-primary text-white hover:bg-primary/90">
             <Link href="/projects/propose">Submit Your Proposal</Link>
