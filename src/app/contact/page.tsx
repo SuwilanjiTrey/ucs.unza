@@ -1,3 +1,5 @@
+"use client"; // ✅ This makes the file a Client Component
+
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
