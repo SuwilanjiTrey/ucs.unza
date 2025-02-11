@@ -57,8 +57,8 @@ export default function DonatePage() {
           <div className="mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-primary/10">
             <Heart className="w-6 h-6 text-primary" />
           </div>
-          <h1 className="text-4xl font-bold sm:text-6xl text-primary">Support Our Mission</h1>
-          <p className="mx-auto max-w-3xl text-lg sm:text-xl text-foreground">
+          <h1 className="text-4xl font-bold sm:text-6xl text-primary font-display">Support Our Mission</h1>
+          <p className="mx-auto max-w-3xl text-lg sm:text-xl text-foreground font-sans">
             Your donation helps us empower the next generation of tech leaders through education, resources, and opportunities.
           </p>
         </div>
@@ -75,8 +75,8 @@ export default function DonatePage() {
                 </div>
               </CardHeader>
               <CardContent>
-                <CardTitle className="text-4xl font-bold text-primary">{stat.title}</CardTitle>
-                <CardDescription className="text-foreground">{stat.description}</CardDescription>
+                <CardTitle className="text-4xl font-bold text-primary font-display">{stat.title}</CardTitle>
+                <CardDescription className="text-foreground font-sans">{stat.description}</CardDescription>
               </CardContent>
             </Card>
           ))}
@@ -89,8 +89,8 @@ export default function DonatePage() {
         <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Card className="bg-background border">
             <CardHeader className="text-center">
-              <CardTitle className="text-2xl font-bold text-primary">Make a Donation</CardTitle>
-              <CardDescription className="text-foreground">
+              <CardTitle className="text-2xl font-bold text-primary font-display">Make a Donation</CardTitle>
+              <CardDescription className="text-foreground font-sans">
                 Choose an amount to support our initiatives
               </CardDescription>
             </CardHeader>
@@ -121,9 +121,9 @@ export default function DonatePage() {
                 </RadioGroup>
                 <div className="space-y-4">
                   <div className="grid gap-4">
-                    <Label htmlFor="name" className="text-primary">Full Name</Label>
+                    <Label htmlFor="name" className="text-primary font-sans">Full Name</Label>
                     <Input id="name" placeholder="John Doe" className="bg-background border" />
-                    <Label htmlFor="email" className="text-primary">Email</Label>
+                    <Label htmlFor="email" className="text-primary font-sans">Email</Label>
                     <Input id="email" type="email" placeholder="john@example.com" className="bg-background border" />
                   </div>
                   <Button className="w-full bg-primary text-white hover:bg-primary/90" size="lg">

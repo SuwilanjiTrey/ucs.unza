@@ -51,8 +51,8 @@ export function SignUpSection() {
     <section className="py-12 md:py-24 bg-muted/50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl font-bold sm:text-4xl">Join Our Society</h2>
-          <p className="text-lg text-muted-foreground">
+          <h2 className="text-3xl font-bold sm:text-4xl font-display">Join Our Society</h2>
+          <p className="text-lg text-muted-foreground font-sans">
             Be part of an exciting community of tech enthusiasts and innovators
           </p>
         </div>

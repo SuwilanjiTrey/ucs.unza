@@ -60,7 +60,7 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <span className="text-xl font-bold">UNZA CS Society</span>
+              <span className="text-xl font-bold font-display">UNZA CS Society</span>
             </Link>
           </div>
 
@@ -71,7 +71,7 @@ export function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="px-3 py-2 text-sm font-medium hover:text-primary"
+                  className="px-3 py-2 text-sm font-medium hover:text-primary font-sans"
                 >
                   {item.name}
                 </Link>

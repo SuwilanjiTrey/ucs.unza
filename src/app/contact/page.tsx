@@ -22,10 +22,10 @@ export default function ContactPage() {
       <section className="pt-32 pb-12 md:pb-24 bg-pattern bg-cover bg-center relative">
         <div className="absolute inset-0 bg-gradient-to-b from-teal-600/40 to-background" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h1 className="text-4xl font-bold sm:text-6xl text-white">
+          <h1 className="text-4xl font-bold sm:text-6xl text-white font-display">
             Get in Touch
           </h1>
-          <p className="mx-auto max-w-3xl text-lg sm:text-xl text-white/90">
+          <p className="mx-auto max-w-3xl text-lg sm:text-xl text-white/90 font-sans">
             Have questions about the UNZA Computer Science Society? We&#39;d love to hear from you.
           </p>
         </div>
@@ -38,7 +38,7 @@ export default function ContactPage() {
             {/* Contact Form */}
             <Card className="p-6 shadow-lg">
               <CardContent className="space-y-6">
-                <h2 className="text-2xl font-bold">Send us a Message</h2>
+                <h2 className="text-2xl font-bold font-display">Send us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <Input placeholder="First Name" required />
@@ -61,7 +61,7 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+                <h2 className="text-2xl font-bold mb-6 font-display">Contact Information</h2>
                 <div className="space-y-6">
                   <Card className="p-4">
                     <div className="flex items-center space-x-4">
@@ -69,7 +69,7 @@ export default function ContactPage() {
                         <Mail className="h-6 w-6 text-teal-600" />
                       </div>
                       <div>
-                        <p className="font-medium">Email</p>
+                        <p className="font-medium font-display">Email</p>
                         <a href="mailto:info@unzacssociety.org" className="text-teal-600 hover:underline">
                           info@unzacssociety.org
                         </a>
@@ -83,7 +83,7 @@ export default function ContactPage() {
                         <Phone className="h-6 w-6 text-teal-600" />
                       </div>
                       <div>
-                        <p className="font-medium">Phone</p>
+                        <p className="font-medium font-display">Phone</p>
                         <a href="tel:+260978123456" className="text-teal-600 hover:underline">
                           +260 978 123 456
                         </a>
@@ -97,8 +97,8 @@ export default function ContactPage() {
                         <MapPin className="h-6 w-6 text-teal-600" />
                       </div>
                       <div>
-                        <p className="font-medium">Location</p>
-                        <p className="text-muted-foreground">
+                        <p className="font-medium font-sans">Location</p>
+                        <p className="text-muted-foreground font-sans">
                           School of Natural Sciences, UNZA Great East Road Campus
                         </p>
                       </div>
@@ -111,8 +111,8 @@ export default function ContactPage() {
                         <Clock className="h-6 w-6 text-teal-600" />
                       </div>
                       <div>
-                        <p className="font-medium">Office Hours</p>
-                        <p className="text-muted-foreground">
+                        <p className="font-medium font-display">Office Hours</p>
+                        <p className="text-muted-foreground font-sans">
                           Monday - Friday: 9:00 AM - 4:00 PM
                         </p>
                       </div>

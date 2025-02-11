@@ -44,8 +44,8 @@ export default function BlogPage() {
       <section className="pt-32 pb-12 md:pb-24 bg-pattern bg-cover bg-center relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h1 className="text-4xl font-bold sm:text-6xl text-primary">Blog & Articles</h1>
-          <p className="mx-auto max-w-3xl text-lg sm:text-xl text-foreground">
+          <h1 className="text-4xl font-bold sm:text-6xl text-primary font-display">Blog & Articles</h1>
+          <p className="mx-auto max-w-3xl text-lg sm:text-xl text-foreground font-sans">
             Stay updated with the latest news, tutorials, and insights from the UNZA Computer Science Society.
           </p>
         </div>
@@ -87,10 +87,10 @@ export default function BlogPage() {
                 <div className="flex-1 p-6">
                   <div className="space-y-4">
                     <Badge variant="secondary">{post.category}</Badge>
-                    <h2 className="text-2xl font-bold leading-tight text-primary">{post.title}</h2>
-                    <p className="text-foreground">{post.excerpt}</p>
+                    <h2 className="text-2xl font-bold leading-tight text-primary font-display">{post.title}</h2>
+                    <p className="text-foreground font-sans">{post.excerpt}</p>
                   </div>
-                  <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
+                  <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground font-sans">
                     <span>{post.author}</span>
                     <span>•</span>
                     <span>{post.date}</span>

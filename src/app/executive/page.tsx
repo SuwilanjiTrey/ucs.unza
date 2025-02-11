@@ -11,44 +11,44 @@ import AlumniSection from "./alumni";
 export default function ExecutivePage() {
   const executives = [
     {
-      name: "John Doe",
+      name: "Jake Chibwanta",
       position: "President",
       image: "/placeholder.svg",
-      bio: "Computer Science final year student with a passion for AI and machine learning.",
+      bio: "Computer Science final year student with a passion for systems engineering, AI and machine learning.",
       email: "john@example.com",
       linkedin: "#",
       github: "#",
     },
     {
-      name: "Jane Smith",
+      name: "Hellen Zulu",
       position: "Vice President",
-      image: "/placeholder.svg",
+      image: "/execs/hellen.png",
       bio: "Software Engineering student focused on web development and UI/UX design.",
       email: "jane@example.com",
       linkedin: "#",
       github: "#",
     },
     {
-      name: "Mike Johnson",
+      name: "Nephas Gomezyani Kango",
       position: "Secretary",
-      image: "/placeholder.svg",
-      bio: "Third-year student specializing in cybersecurity and network administration.",
+      image: "/execs/nephas.jpg",
+      bio: "Final-year student specializing in software engineering and full stack development.",
       email: "mike@example.com",
       linkedin: "#",
       github: "#",
     },
     {
-      name: "Sarah Williams",
+      name: "Faith selita Nambule",
       position: "Treasurer",
-      image: "/placeholder.svg",
-      bio: "Final year student with experience in project management and finance.",
+      image: "/execs/faith.jpg",
+      bio: "Final year cyber-security and netwroking student with experience in project management and finance.",
       email: "sarah@example.com",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/faith-nambule-545b96298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       github: "#",
     },
     {
-      name: "David Brown",
-      position: "Events Coordinator",
+      name: "Enos Malunga",
+      position: "Events and Project Coordinator",
       image: "/placeholder.svg",
       bio: "Third-year student passionate about organizing tech events and workshops.",
       email: "david@example.com",
@@ -56,10 +56,37 @@ export default function ExecutivePage() {
       github: "#",
     },
     {
-      name: "Lisa Anderson",
-      position: "Technical Lead",
+      name: "Deborah Nyirenda",
+      position: "Web master",
       image: "/placeholder.svg",
-      bio: "Final year student specializing in full-stack development and cloud computing.",
+      bio: "Third year student specializing in full-stack development and cloud computing.",
+      email: "lisa@example.com",
+      linkedin: "#",
+      github: "#",
+    },
+	{
+      name: "Stanley Kalenga",
+      position: "Publicity Secretary",
+      image: "/execs/stanley_kalenga.jpeg",
+      bio: "Final year student specializing cyber security and networking.",
+      email: "lisa@example.com",
+      linkedin: "#",
+      github: "#",
+    },
+{
+      name: "Peter",
+      position: "Commitee member",
+      image: "/placeholder.svg",
+      bio: "Third year student specializing cyber security and networking.",
+      email: "lisa@example.com",
+      linkedin: "#",
+      github: "#",
+    },
+{
+      name: "Mwiza M'funi",
+      position: "Commitee member",
+      image: "/placeholder.svg",
+      bio: "Final year student specializing cyber security and networking.",
       email: "lisa@example.com",
       linkedin: "#",
       github: "#",
@@ -84,7 +111,7 @@ export default function ExecutivePage() {
     const interval = setInterval(() => {
       setDirection(1);
       setIndex((prevIndex) => (prevIndex + 1) % executives.length);
-    }, 10000);
+    }, 6000);   //change how long an image stays on the screen 10,000 = 10sec e.t.c
     return () => clearInterval(interval);
   }, [executives.length]);
 
@@ -114,7 +141,7 @@ const getCardStyles = (offset: number): MotionStyle => ({
     },
     transition: {
       x: { type: 'spring', stiffness: 300, damping: 30 },
-      opacity: { duration: 0.8 },
+      opacity: { duration: 0.8 }, //trnsition speed between images
     },
   });
 
@@ -125,10 +152,10 @@ const getCardStyles = (offset: number): MotionStyle => ({
       <section className="pt-32 pb-12 md:pb-24 bg-pattern bg-cover bg-center relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h1 className="text-4xl font-bold sm:text-6xl text-primary">
+          <h1 className="text-4xl font-bold sm:text-6xl text-primary font-display">
             Meet Our Executive Team
           </h1>
-          <p className="mx-auto max-w-3xl text-lg sm:text-xl text-foreground">
+          <p className="mx-auto max-w-3xl text-lg sm:text-xl text-foreground font-sans">
             Get to know the dedicated individuals leading the UNZA Computer
             Science Society.
           </p>
@@ -164,9 +191,9 @@ const getCardStyles = (offset: number): MotionStyle => ({
                     </CardHeader>
                     <CardContent className="p-6">
                       <div className="space-y-4 text-center">
-                        <h2 className="text-2xl font-bold">{executive.name}</h2>
-                        <p className="text-primary">{executive.position}</p>
-                        <p className="text-foreground text-sm md:text-base">
+                        <h2 className="text-2xl font-bold font-display">{executive.name}</h2>
+                        <p className="text-primary font-sans">{executive.position}</p>
+                        <p className="text-foreground text-sm md:text-base font-sans">
                           {executive.bio}
                         </p>
                         <div className="flex justify-center space-x-4">
@@ -211,10 +238,10 @@ const getCardStyles = (offset: number): MotionStyle => ({
   <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background" />
   <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
           
-          <h2 className="text-3xl font-bold sm:text-4xl text-primary">
+          <h2 className="text-3xl font-bold sm:text-4xl text-primary font-display">
             Get in Touch with Our Team
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-foreground">
+          <p className="mx-auto max-w-2xl text-lg text-foreground font-sans">
             Have questions or want to learn more about the society? Feel free to
             reach out to any of our executive members.
           </p>

@@ -65,14 +65,14 @@ export function FAQSection() {
     <section className="py-12 md:py-24 bg-muted/50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl font-bold sm:text-4xl">
+          <h2 className="text-3xl font-bold sm:text-4xl font-display">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground font-sans">
             Find answers to common questions about the UNZA Computer Science Society
           </p>
         </div>
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-3xl font-sans">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>

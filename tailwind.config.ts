@@ -10,9 +10,9 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Poppins", "sans-serif"], // Default body text
-        display: ["Josefin Sans", "sans-serif"], // Headings
-        mono: ["Fira Code", "monospace"], // Code blocks
+        sans: ["Poppins"], // Default body text , "sans-serif"
+        display: ["Josefin Sans"], // Headings , "sans-serif"
+        mono: ["Fira Code"], // Code blocks , "monospace"
       },
       colors: {
         border: "hsl(var(--border))",

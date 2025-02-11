@@ -7,14 +7,14 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 py-12 md:grid-cols-4">
           <div className="space-y-4">
-            <h3 className="text-lg font-bold">UNZA CS Society</h3>
-            <p className="text-sm text-muted-foreground">
+            <h3 className="text-lg font-bold font-display">UNZA CS Society</h3>
+            <p className="text-sm text-muted-foreground font-sans">
               Empowering future tech leaders through innovation, collaboration, and
               excellence.
             </p>
           </div>
           <div>
-            <h4 className="text-sm font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-sm font-semibold mb-4 font-sans">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/about" className="hover:text-primary">

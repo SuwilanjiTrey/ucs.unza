@@ -7,31 +7,31 @@ import Link from "next/link";
 const AlumniSection = () => {
   const alumni = [
     {
-      name: "Robert Chen",
-      graduationYear: "2023",
-      currentRole: "Software Engineer at Google",
-      image: "/placeholder.svg",
+      name: "Daliso Miti",
+      graduationYear: "2025",
+      currentRole: "Software Engineer",
+      image: "/execs/daliso miti.jpg",
       contribution: "Founded the society's annual hackathon",
       email: "robert@example.com",
       linkedin: "#",
       github: "#"
     },
     {
-      name: "Maria Garcia",
-      graduationYear: "2022",
-      currentRole: "Product Manager at Microsoft",
-      image: "/placeholder.svg",
-      contribution: "Established mentorship program",
+      name: "Waza McDonald Banda",
+      graduationYear: "2025",
+      currentRole: "Software Developer at MyCab zambia",
+      image: "/execs/waza.jpg",
+      contribution: "Established tutoring program",
       email: "maria@example.com",
       linkedin: "#",
       github: "#"
     },
     {
-      name: "James Wilson",
-      graduationYear: "2021",
+      name: "Wakung'uma Nyambe III",
+      graduationYear: "2024",
       currentRole: "Tech Lead at Amazon",
-      image: "/placeholder.svg",
-      contribution: "Created technical workshop series",
+      image: "/execs/Wakunguma.jpg",
+      contribution: "UCS President",
       email: "james@example.com",
       linkedin: "#",
       github: "#"
@@ -45,7 +45,7 @@ const AlumniSection = () => {
           <h2 className="text-3xl font-bold sm:text-4xl text-primary">
             Distinguished Alumni
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-foreground">
+          <p className="mx-auto max-w-2xl text-lg text-foreground font-display">
             Meet our former society members who have gone on to achieve remarkable success in their careers.
           </p>
         </div>
@@ -65,11 +65,11 @@ const AlumniSection = () => {
               </CardHeader>
               <CardContent className="p-6 space-y-4">
                 <div>
-                  <h3 className="text-xl font-semibold">{alumnus.name}</h3>
-                  <p className="text-primary text-sm">Class of {alumnus.graduationYear}</p>
+                  <h3 className="text-xl font-semibold font-display">{alumnus.name}</h3>
+                  <p className="text-primary text-sm font-sans">Class of {alumnus.graduationYear}</p>
                 </div>
-                <p className="text-foreground font-medium">{alumnus.currentRole}</p>
-                <p className="text-muted-foreground text-sm">{alumnus.contribution}</p>
+                <p className="text-foreground font-medium font-sans">{alumnus.currentRole}</p>
+                <p className="text-muted-foreground text-sm font-sans">{alumnus.contribution}</p>
                 <div className="flex space-x-4 pt-2">
                   <Link
                     href={`mailto:${alumnus.email}`}

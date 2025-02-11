@@ -48,15 +48,15 @@ export default function ProjectsPage() {
       <section className="pt-32 pb-12 md:pb-24 bg-pattern bg-cover bg-center relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h1 className="text-4xl font-bold sm:text-6xl text-primary">Our Projects</h1>
-          <p className="mx-auto max-w-3xl text-lg sm:text-xl text-foreground">
+          <h1 className="text-4xl font-bold sm:text-6xl text-primary font-display">Our Projects</h1>
+          <p className="mx-auto max-w-3xl text-lg sm:text-xl text-foreground font-sans">
             Discover the innovative projects developed by our members and get involved in shaping the future of technology.
           </p>
           <div className="flex justify-center gap-4">
-            <Button size="lg" asChild className="bg-primary text-white hover:bg-primary/90">
+            <Button size="lg" asChild className="bg-primary text-white hover:bg-primary/90 font-sans">
               <Link href="/projects/propose">Propose a Project</Link>
             </Button>
-            <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/10">
+            <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/10 font-sans">
               <Link href="/join">Join Our Team</Link>
             </Button>
           </div>
@@ -112,8 +112,8 @@ export default function ProjectsPage() {
       <section className="py-12 md:py-24 bg-muted bg-pattern bg-cover bg-center relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h2 className="text-3xl font-bold sm:text-4xl text-primary">Have a Project Idea?</h2>
-          <p className="mx-auto max-w-2xl text-lg text-foreground">
+          <h2 className="text-3xl font-bold sm:text-4xl text-primary font-display">Have a Project Idea?</h2>
+          <p className="mx-auto max-w-2xl text-lg text-foreground font-sans">
             We&#39;re always looking for new and innovative project ideas. Share your vision with us and let&#39;s bring it to life together.
           </p>
           <Button size="lg" asChild className="bg-primary text-white hover:bg-primary/90">

@@ -13,8 +13,8 @@ export default function AboutPage() {
       <section className="pt-32 pb-12 md:pb-24 bg-pattern bg-cover bg-center relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h1 className="text-4xl font-bold sm:text-6xl text-primary">About Us</h1>
-          <p className="mx-auto max-w-3xl text-lg sm:text-xl text-foreground">
+          <h1 className="text-4xl font-bold sm:text-6xl text-primary font-display">About Us</h1>
+          <p className="mx-auto max-w-3xl text-lg sm:text-xl text-foreground font-sans">
             Learn about our journey, mission, and the impact we&#39;re making in the
             tech community at the University of Zambia.
           </p>
@@ -25,8 +25,8 @@ export default function AboutPage() {
       <section className="py-12 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-primary">Our History</h2>
-            <div className="space-y-4 text-foreground">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-primary font-display">Our History</h2>
+            <div className="space-y-4 text-foreground font-sans">
               <p>
                 Founded in 2010, the UNZA Computer Science Society began as a
                 small group of passionate students who wanted to create a
@@ -54,7 +54,7 @@ export default function AboutPage() {
       {/* Mission & Vision Section */}
       <section className="py-12 md:py-24 bg-muted bg-pattern bg-cover bg-center relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid gap-12 md:grid-cols-3 text-center">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid gap-12 md:grid-cols-3 text-center font-sans">
           {[{ icon: Target, title: "Our Mission", text: "To foster a vibrant community of tech enthusiasts and empower students with the knowledge and skills needed to excel in the field of computer science." },
             { icon: Lightbulb, title: "Our Vision", text: "To be the leading student organization in technology innovation and learning, creating opportunities for growth and excellence in computer science." },
             { icon: Users2, title: "Our Values", text: "Innovation, collaboration, inclusivity, and continuous learning form the cornerstone of our society's culture and activities." }].map((item, i) => (
@@ -72,8 +72,8 @@ export default function AboutPage() {
       {/* Milestones Section */}
       <section className="py-12 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <h2 className="text-3xl font-bold sm:text-4xl text-primary">Our Milestones</h2>
-          <p className="text-lg text-foreground">Key achievements and moments in our journey</p>
+          <h2 className="text-3xl font-bold sm:text-4xl text-primary font-display">Our Milestones</h2>
+          <p className="text-lg text-foreground font-sans">Key achievements and moments in our journey</p>
           <div className="space-y-8">
             {[{ year: "2010", title: "Society Founded", description: "Establishment of the UNZA Computer Science Society with 20 founding members." },
               { year: "2015", title: "First Tech Conference", description: "Successfully organized the first student-led tech conference at UNZA." },
@@ -100,8 +100,8 @@ export default function AboutPage() {
       <section className="py-12 md:py-24 bg-pattern bg-cover bg-center relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/90 to-background" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h2 className="text-3xl font-bold sm:text-4xl text-primary">Be Part of Our Story</h2>
-          <p className="mx-auto max-w-2xl text-lg text-foreground">
+          <h2 className="text-3xl font-bold sm:text-4xl text-primary font-display">Be Part of Our Story</h2>
+          <p className="mx-auto max-w-2xl text-lg text-foreground font-sans">
             Join us in shaping the future of technology at UNZA. Together, we can create amazing opportunities and drive innovation.
           </p>
           <Button size="lg" asChild className="bg-primary text-white hover:bg-primary/90">
