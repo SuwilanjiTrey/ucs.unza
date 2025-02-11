@@ -30,7 +30,7 @@ const AlumniSection = () => {
       name: "Wakung'uma Nyambe III",
       graduationYear: "2024",
       currentRole: "Tech Lead at Amazon",
-      image: "/execs/Wakunguma.jpg",
+      image: "/execs/wakunguma.jpg",
       contribution: "UCS President",
       email: "james@example.com",
       linkedin: "#",
