@@ -132,7 +132,7 @@
 }
 
 /* Custom styles for smaller screens */
-@media (max-width: 640px) {
+@media (max-width: 760px) {
     .carousel-card {
     margin: 0 auto;
   }
@@ -140,5 +140,17 @@
   position: relative;
   overflow: hidden;
   gap: 1rem; /* Add some spacing */
+}
+.h1 .h2 .h3 .h4 .h5 .h6{
+  font-family: 'Josefin Sans';
+  src: url('/fonts/JosefinSans-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+	}
+.p {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 }
