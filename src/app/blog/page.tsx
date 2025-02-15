@@ -1,7 +1,6 @@
-import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
+
 import { Search } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
@@ -52,7 +51,7 @@ export default function BlogPage() {
             <AlertDescription className="text-center py-12">
               <h2 className="text-2xl font-bold mb-4">Blog Posts Coming Soon!</h2>
               <p className="text-muted-foreground">
-                We're currently working on amazing content for you. Check back soon for the latest articles, 
+                We&#39;re currently working on amazing content for you. Check back soon for the latest articles, 
                 tutorials, and updates from the UNZA Computer Science Society.
               </p>
             </AlertDescription>

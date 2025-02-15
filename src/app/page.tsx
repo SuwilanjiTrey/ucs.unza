@@ -2,10 +2,9 @@ import { HeroSection } from "@/components/hero-section"
 import { FAQSection } from "@/components/faq-section"
 import { SignUpSection } from "@/components/sign-up-section"
 import LatestEventsSection from "@/components/latestevents"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Code2, Users, Calendar, Trophy } from 'lucide-react'
-import Link from "next/link"
-import Image from "next/image"
+
+import { Code2, Users, Calendar, Trophy } from 'lucide-react'
+
 
 
 

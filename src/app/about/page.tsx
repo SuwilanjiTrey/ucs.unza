@@ -40,7 +40,7 @@ Over the years, UCS has played a pivotal role in equipping students with essenti
 
               </p>
               <p>
-Today, UCS continues to be the hub for all things tech, welcoming students from diverse backgrounds and interests within computer science. Whether you're into software development, cybersecurity, AI, networking, or Compuer Systems, UCS provides the platform to learn, innovate, and connect.
+Today, UCS continues to be the hub for all things tech, welcoming students from diverse backgrounds and interests within computer science. Whether you&#39;re into software development, cybersecurity, AI, networking, or Compuer Systems, UCS provides the platform to learn, innovate, and connect.
               </p>
             </div>
           </div>
