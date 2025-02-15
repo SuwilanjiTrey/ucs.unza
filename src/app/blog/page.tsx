@@ -3,40 +3,10 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { Search } from "lucide-react";
-import Link from "next/link";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 export default function BlogPage() {
   const categories = ["All", "News", "Tutorials", "Events", "Research", "Technology"];
-  
-  const posts = [
-    {
-      title: "Introduction to Machine Learning",
-      excerpt: "Learn the basics of machine learning and how it's shaping our future...",
-      category: "Tutorials",
-      author: "John Doe",
-      date: "March 15, 2024",
-      image: "/placeholder.svg",
-      slug: "intro-to-ml",
-    },
-    {
-      title: "Upcoming Hackathon 2024",
-      excerpt: "Join us for our annual hackathon and showcase your coding skills...",
-      category: "Events",
-      author: "Jane Smith",
-      date: "March 10, 2024",
-      image: "/placeholder.svg",
-      slug: "hackathon-2024",
-    },
-    {
-      title: "Web Development Best Practices",
-      excerpt: "Discover the latest trends and best practices in web development...",
-      category: "Tutorials",
-      author: "Mike Johnson",
-      date: "March 5, 2024",
-      image: "/placeholder.svg",
-      slug: "web-dev-practices",
-    },
-  ];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -75,32 +45,20 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Blog Posts Grid */}
+      {/* Coming Soon Message */}
       <section className="py-12 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post, index) => (
-            <article key={index} className="group flex flex-col overflow-hidden rounded-lg border bg-background transition-colors hover:bg-accent">
-              <Link href={`/blog/${post.slug}`}>
-                <div className="relative h-48 overflow-hidden">
-                  <Image src={post.image} alt={post.title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
-                </div>
-                <div className="flex-1 p-6">
-                  <div className="space-y-4">
-                    <Badge variant="secondary">{post.category}</Badge>
-                    <h2 className="text-2xl font-bold leading-tight text-primary font-display">{post.title}</h2>
-                    <p className="text-foreground font-sans">{post.excerpt}</p>
-                  </div>
-                  <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground font-sans">
-                    <span>{post.author}</span>
-                    <span>•</span>
-                    <span>{post.date}</span>
-                  </div>
-                </div>
-              </Link>
-            </article>
-          ))}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Alert className="bg-muted">
+            <AlertDescription className="text-center py-12">
+              <h2 className="text-2xl font-bold mb-4">Blog Posts Coming Soon!</h2>
+              <p className="text-muted-foreground">
+                We're currently working on amazing content for you. Check back soon for the latest articles, 
+                tutorials, and updates from the UNZA Computer Science Society.
+              </p>
+            </AlertDescription>
+          </Alert>
         </div>
       </section>
     </div>
   );
-}
+};

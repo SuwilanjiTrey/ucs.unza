@@ -24,7 +24,7 @@ export default function ProjectsPage() {
       title: "AI Study Assistant",
       description:
         "An AI-powered platform helping students with study materials and exam preparation.",
-      image: "/placeholder.svg",
+      image: "/projects/aistudy.jpeg",
       tags: ["Python", "TensorFlow", "Flask"],
       status: "In Progress",
       github: "#",
@@ -34,7 +34,7 @@ export default function ProjectsPage() {
       title: "Campus Events Platform",
       description:
         "A web platform for managing and discovering campus events and activities.",
-      image: "/placeholder.svg",
+      image: "/projects/gps.jpeg",
       tags: ["Next.js", "TypeScript", "Prisma"],
       status: "In Progress",
       github: "#",

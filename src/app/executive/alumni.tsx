@@ -10,10 +10,10 @@ const AlumniSection = () => {
       name: "Daliso Miti",
       graduationYear: "2025",
       currentRole: "Software Engineer",
-      image: "/execs/daliso miti.jpg",
+      image: "/execs/daliso miti.jpeg",
       contribution: "Founded the society's annual hackathon",
-      email: "robert@example.com",
-      linkedin: "#",
+      email: "#",
+      linkedin: "https://www.linkedin.com/in/daliso-miti-805b8323a/",
       github: "#"
     },
     {
@@ -22,8 +22,8 @@ const AlumniSection = () => {
       currentRole: "Software Developer at MyCab zambia",
       image: "/execs/waza.jpg",
       contribution: "Established tutoring program",
-      email: "maria@example.com",
-      linkedin: "#",
+      email: "#",
+      linkedin: "https://www.linkedin.com/in/waza-banda-a0aa451b4/",
       github: "#"
     },
     {
@@ -32,8 +32,8 @@ const AlumniSection = () => {
       currentRole: "Tech Lead at Amazon",
       image: "/execs/wakunguma.jpg",
       contribution: "UCS President",
-      email: "james@example.com",
-      linkedin: "#",
+      email: "#",
+      linkedin: "https://www.linkedin.com/in/wakung-uma-nyambe-iii-4a1502237/",
       github: "#"
     }
   ];

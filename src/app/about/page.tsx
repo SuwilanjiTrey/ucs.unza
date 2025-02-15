@@ -28,25 +28,24 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-primary font-display">Our History</h2>
             <div className="space-y-4 text-foreground font-sans">
               <p>
-                Founded in 2010, the UNZA Computer Science Society began as a
-                small group of passionate students who wanted to create a
-                community for tech enthusiasts.
+                
+The University Computer Science Society (UCS) was founded with a vision to create a thriving community for students passionate about technology, innovation, and problem-solving. What started as a small group of tech enthusiasts has grown into a dynamic organization that fosters learning, collaboration, and professional growth.  
+
               </p>
               <p>
-                Over the years, we&#39;ve grown into one of the most active and
-                influential student organizations at UNZA, hosting numerous
-                events, workshops, and initiatives that have impacted hundreds of
-                students.
+                 
+
+Over the years, UCS has played a pivotal role in equipping students with essential skills through workshops, hackathons, mentorship programs, and networking opportunities. We bridge the gap between academia and industry, ensuring that our members are prepared for the ever-evolving tech landscape.  
+
+
               </p>
               <p>
-                Today, we continue to evolve and adapt to the changing landscape
-                of technology, while maintaining our core mission of empowering
-                students in their tech journey.
+Today, UCS continues to be the hub for all things tech, welcoming students from diverse backgrounds and interests within computer science. Whether you're into software development, cybersecurity, AI, networking, or Compuer Systems, UCS provides the platform to learn, innovate, and connect.
               </p>
             </div>
           </div>
           <div className="relative h-[400px] rounded-xl overflow-hidden">
-            <Image src="/placeholder.svg" alt="History of UCS" fill className="object-cover" />
+            <Image src="/execs/ucs.jpg" alt="History of UCS" fill className="object-cover" />
           </div>
         </div>
       </section>

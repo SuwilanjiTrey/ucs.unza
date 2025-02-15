@@ -97,21 +97,21 @@
 /* Typography */
 @font-face {
   font-family: 'Josefin Sans';
-  src: url('/fonts/JosefinSans-Regular.ttf') format('ttf');
+  src: url('/fonts/JosefinSans-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins-Regular.ttf') format('ttf');
+  src: url('/fonts/Poppins-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Fira Code';
-  src: url('/fonts/FiraCode-Regular.ttf') format('ttf');
+  src: url('/fonts/FiraCode-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -143,13 +143,13 @@
 }
 .h1 .h2 .h3 .h4 .h5 .h6{
   font-family: 'Josefin Sans';
-  src: url('/fonts/JosefinSans-Regular.ttf') format('ttf');
+  src: url('/fonts/JosefinSans-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 	}
 .p {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins-Regular.ttf') format('ttf');
+  src: url('/fonts/Poppins-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
