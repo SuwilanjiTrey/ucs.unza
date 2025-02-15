@@ -88,7 +88,7 @@ export default function ExecutivePage() {
       name: "Peter K. Lubasi",
       position: "Commitee member",
       image: "/execs/peter.jpg",
-      bio: "Final year student specializing cyber security and networking.",
+      bio: "Third year student specializing cyber security and networking.",
       email: "peterklubasi68@gmail.com",
       linkedin: "https://www.linkedin.com/in/peter-k-lubasi-801103335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       github: "#",
