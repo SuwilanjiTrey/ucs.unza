@@ -40,12 +40,19 @@ export default function SignUpSection() {
   })
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    toast({
-      title: "Registration submitted!",
-      description: "We'll get back to you shortly with more information.",
-    })
-    console.log(values)
-  }
+  toast({
+    title: "Registration submitted!",
+    description: "We'll get back to you shortly with more information.",
+  })
+
+  console.log(values)
+
+  // Redirect to WhatsApp after 2 seconds
+  setTimeout(() => {
+    window.location.href = "https://chat.whatsapp.com/HdGA0MEbk6hIBI80z253TQ"; // Replace with your WhatsApp link
+  }, 2000)
+}
+
 
   return (
     <section className="py-12 md:py-24 bg-muted/50">
@@ -121,6 +128,7 @@ export default function SignUpSection() {
                 )}
               />
               <Button type="submit" className="w-full">
+                
                 Sign Up
               </Button>
             </form>
